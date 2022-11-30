@@ -6,6 +6,12 @@
     padding: 1rem;
 }
 
+.icon {
+    fill: black;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
 .navList {
     list-style: none;
     display: flex;

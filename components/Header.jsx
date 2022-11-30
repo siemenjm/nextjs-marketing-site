@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import MediaQuery from 'react-responsive';
+import { FaBars, FaRegWindowClose } from 'react-icons/fa';
 import siteLogo from '../public/images/generic_logo.png';
 import style from '../styles/Header.module.css';
 
@@ -28,6 +29,7 @@ export default function Header() {
                     </ul>
                 </MediaQuery>
                 <MediaQuery maxWidth={1024}>
+                    <FaBars className={style.icon} />
                     <ul className={`${style.navList} ${style.tablet}`}>
                         <li>
                             <Link href='/'>Home</Link>
