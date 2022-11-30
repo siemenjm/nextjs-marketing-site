@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#__next > div {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background-color: red;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+}
