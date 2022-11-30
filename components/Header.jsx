@@ -9,7 +9,7 @@ export default function Header() {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     function handleClick() {
-        setToggleMenu(true);
+        toggleMenu ? setToggleMenu(false) : setToggleMenu(true);
     }
 
     return (
@@ -32,7 +32,29 @@ export default function Header() {
                         <Link href='/contact'>Contact</Link>
                     </li>
                 </ul>
-                <FaBars className={`${style.icon} ${style.tablet}`} />
+
+                {toggleMenu ?
+                    <ul className={`${style.navList} ${style.tablet}`}>
+                        <li>
+                            <div>
+                                <FaRegWindowClose onClick={handleClick} className={`${style.icon} ${style.tablet}`} />
+                            </div>
+                        </li>
+                        <li>
+                            <Link href='/'>Home</Link>
+                        </li>
+                        <li>
+                            <Link href='/about'>About</Link>
+                        </li>
+                        <li>
+                            <Link href='/contact'>Contact</Link>
+                        </li>
+                    </ul>
+                :
+                    <div>
+                        <FaBars onClick={handleClick} className={`${style.icon} ${style.tablet}`} />
+                    </div>
+                }
             </nav>
         </div>
     )
