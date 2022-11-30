@@ -36,7 +36,7 @@ export default function Header() {
                 {toggleMenu ?
                     <ul className={`${style.navList} ${style.tablet}`}>
                         <li>
-                            <div>
+                            <div className={`${style.iconContainer} ${style.shiftRight}`}>
                                 <FaRegWindowClose onClick={handleClick} className={`${style.icon} ${style.tablet}`} />
                             </div>
                         </li>
@@ -51,7 +51,7 @@ export default function Header() {
                         </li>
                     </ul>
                 :
-                    <div>
+                    <div className={`${style.iconContainer}`}>
                         <FaBars onClick={handleClick} className={`${style.icon} ${style.tablet}`} />
                     </div>
                 }

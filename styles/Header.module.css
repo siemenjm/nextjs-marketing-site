@@ -6,6 +6,16 @@
     padding: 1rem;
 }
 
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconContainer.shiftRight {
+    justify-content: flex-end;
+}
+
 .icon {
     fill: black;
     width: 1.25rem;
