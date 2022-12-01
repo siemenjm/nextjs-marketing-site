@@ -5,6 +5,21 @@ import { FaBars, FaRegWindowClose } from 'react-icons/fa';
 import siteLogo from '../public/images/generic_logo.png';
 import style from '../styles/Header.module.css';
 
+const pages = [
+    {
+        path: '/',
+        pageTitle: 'Home',
+    },
+    {
+        path: '/about',
+        pageTitle: 'About',
+    },
+    {
+        path: '/contact',
+        pageTitle: 'Contact',
+    },
+];
+
 export default function Header() {
     const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -27,20 +42,13 @@ export default function Header() {
             </Link>
             <nav>
                 <ul className={`${style.navList} ${style.desktop}`}>
-                    <li>
-                        <div className={`${style.iconContainer} ${style.shiftRight}`}>
-                            <FaRegWindowClose onClick={handleClick} className={`${style.icon} ${style.tablet}`} />
-                        </div>
-                    </li>
-                    <li>
-                        <Link href='/'>Home</Link>
-                    </li>
-                    <li>
-                        <Link href='/about'>About</Link>
-                    </li>
-                    <li>
-                        <Link href='/contact'>Contact</Link>
-                    </li>
+                    {pages.map((page) => {
+                        return (
+                            <li>
+                                <Link href={page.path} key={page.path} >{page.pageTitle}</Link>
+                            </li>
+                        );
+                    })}
                 </ul>
 
                 <ul className={`${style.navList} ${style.tablet} ${transition}`}>
@@ -50,15 +58,13 @@ export default function Header() {
                                 <FaRegWindowClose onClick={handleClick} className={`${style.icon} ${style.tablet}`} />
                             </div>
                         </li>
-                        <li>
-                            <Link href='/'>Home</Link>
-                        </li>
-                        <li>
-                            <Link href='/about'>About</Link>
-                        </li>
-                        <li>
-                            <Link href='/contact'>Contact</Link>
-                        </li>
+                        {pages.map((page) => {
+                        return (
+                            <li>
+                                <Link href={page.path} key={page.path} >{page.pageTitle}</Link>
+                            </li>
+                        );
+                    })}
                     </div>
                 </ul>
                 {toggleMenu ?
