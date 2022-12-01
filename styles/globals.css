@@ -17,14 +17,22 @@ a {
   margin: 0;
 }
 
-#__next > div {
+#__next {
     display: flex;
     justify-content: center;
 }
 
-main {
+#__next > div {
     background-color: rgb(255, 218, 218);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 1440px;
     min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    flex-grow: 1;
 }
