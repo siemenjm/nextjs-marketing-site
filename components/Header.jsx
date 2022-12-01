@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaRegWindowClose } from 'react-icons/fa';
 import siteLogo from '../public/images/generic_logo.png';
-import style from '../styles/Header.module.css';
+import styles from '../styles/Header.module.css';
 
 const pages = [
     {
@@ -28,10 +28,10 @@ export default function Header() {
     }
 
     let transition;
-    toggleMenu ? transition = style.transition : transition = ''; 
+    toggleMenu ? transition = styles.transition : transition = ''; 
 
     return (
-        <div className={style.header}>
+        <div className={styles.header}>
             <Link href='/'>
                 <Image
                     priority
@@ -41,7 +41,7 @@ export default function Header() {
                 />
             </Link>
             <nav>
-                <ul className={`${style.navList} ${style.desktop}`}>
+                <ul className={`${styles.navList} ${styles.desktop}`}>
                     {pages.map((page) => {
                         return (
                             <li key={page.path} >
@@ -51,11 +51,11 @@ export default function Header() {
                     })}
                 </ul>
 
-                <ul className={`${style.navList} ${style.tablet} ${transition}`}>
+                <ul className={`${styles.navList} ${styles.tablet} ${transition}`}>
                     <div>
                         <li>
-                            <div className={`${style.iconContainer} ${style.shiftRight}`}>
-                                <FaRegWindowClose onClick={handleClick} className={`${style.icon} ${style.tablet}`} />
+                            <div className={`${styles.iconContainer} ${styles.shiftRight}`}>
+                                <FaRegWindowClose onClick={handleClick} className={`${styles.icon} ${styles.tablet}`} />
                             </div>
                         </li>
                         {pages.map((page) => {
@@ -70,8 +70,8 @@ export default function Header() {
                 {toggleMenu ?
                     <></> 
                 :
-                    <div className={`${style.iconContainer} ${style.tablet}`}>
-                        <FaBars onClick={handleClick} className={style.icon} />
+                    <div className={`${styles.iconContainer} ${styles.tablet}`}>
+                        <FaBars onClick={handleClick} className={styles.icon} />
                     </div>
                 }
             </nav>
