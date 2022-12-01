@@ -1,0 +1,31 @@
+.footer {
+    background-color: rgb(194, 194, 255);
+    width: 100%;
+    padding: 1rem;
+}
+
+.upperFooter, .lowerFooter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.upperFooter {
+    border-bottom: 1px solid black;
+}
+
+.innerContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftContainer {
+    align-items: flex-start;
+}
+
+.centerContainer {
+    align-items: center;
+}
+
+.rightContainer {
+    align-items: flex-end;
+}
