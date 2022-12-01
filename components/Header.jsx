@@ -44,8 +44,8 @@ export default function Header() {
                 <ul className={`${style.navList} ${style.desktop}`}>
                     {pages.map((page) => {
                         return (
-                            <li>
-                                <Link href={page.path} key={page.path} >{page.pageTitle}</Link>
+                            <li key={page.path} >
+                                <Link href={page.path}>{page.pageTitle}</Link>
                             </li>
                         );
                     })}
@@ -60,8 +60,8 @@ export default function Header() {
                         </li>
                         {pages.map((page) => {
                         return (
-                            <li>
-                                <Link href={page.path} key={page.path} >{page.pageTitle}</Link>
+                            <li key={page.path} >
+                                <Link href={page.path}>{page.pageTitle}</Link>
                             </li>
                         );
                     })}
