@@ -12,6 +12,10 @@
     align-items: center;
 }
 
+.iconContainer:hover {
+    cursor: pointer;
+}
+
 .iconContainer.shiftRight {
     justify-content: flex-end;
 }

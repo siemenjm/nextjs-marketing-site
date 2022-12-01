@@ -14,12 +14,14 @@ export default function Header() {
 
     return (
         <div className={style.header}>
-            <Image
-                priority
-                src={siteLogo}
-                alt='site logo'
-                width={130}
-            />
+            <Link href='/'>
+                <Image
+                    priority
+                    src={siteLogo}
+                    alt='site logo'
+                    width={130}
+                />
+            </Link>
             <nav>
                 <ul className={`${style.navList} ${style.desktop}`}>
                     <li>
