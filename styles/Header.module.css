@@ -38,11 +38,16 @@
     background-color: aqua;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -50%;
     width: 50%;
     height: 100%;
     flex-direction: column;
     padding: 2rem 1rem 1rem 1rem;
+    transition: right 0.25s ease-out;
+}
+
+.navList.tablet.transition {
+    right: 0;
 }
 
 @media (max-width: 1024px) {
