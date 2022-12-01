@@ -44,26 +44,28 @@ export default function Header() {
                 </ul>
 
                 <ul className={`${style.navList} ${style.tablet} ${transition}`}>
-                    <li>
-                        <div className={`${style.iconContainer} ${style.shiftRight}`}>
-                            <FaRegWindowClose onClick={handleClick} className={`${style.icon} ${style.tablet}`} />
-                        </div>
-                    </li>
-                    <li>
-                        <Link href='/'>Home</Link>
-                    </li>
-                    <li>
-                        <Link href='/about'>About</Link>
-                    </li>
-                    <li>
-                        <Link href='/contact'>Contact</Link>
-                    </li>
+                    <div>
+                        <li>
+                            <div className={`${style.iconContainer} ${style.shiftRight}`}>
+                                <FaRegWindowClose onClick={handleClick} className={`${style.icon} ${style.tablet}`} />
+                            </div>
+                        </li>
+                        <li>
+                            <Link href='/'>Home</Link>
+                        </li>
+                        <li>
+                            <Link href='/about'>About</Link>
+                        </li>
+                        <li>
+                            <Link href='/contact'>Contact</Link>
+                        </li>
+                    </div>
                 </ul>
                 {toggleMenu ?
                     <></> 
                 :
-                    <div className={`${style.iconContainer}`}>
-                        <FaBars onClick={handleClick} className={`${style.icon} ${style.tablet}`} />
+                    <div className={`${style.iconContainer} ${style.tablet}`}>
+                        <FaBars onClick={handleClick} className={style.icon} />
                     </div>
                 }
             </nav>
